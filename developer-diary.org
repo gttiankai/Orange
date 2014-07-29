@@ -1,0 +1,40 @@
+* 开发日记
+** <2014-07-24 Thu>
+*** DONE 基本的git仓库的建立，以及对git仓库的一些初始化和设置的问题。
+CLOSED: [2014-07-29 Tue 21:26]
+- State "DONE"       from ""           [2014-07-29 Tue 21:26]
+*** DONE 看完了《orange》的第一章
+CLOSED: [2014-07-29 Tue 21:26]
+- State "DONE"       from ""           [2014-07-29 Tue 21:26]
+** <2014-07-29 Tue>
+*** DONE 安装bochs和配置bochs
+CLOSED: [2014-07-29 Tue 22:40]
+- State "DONE"       from "TODO"       [2014-07-29 Tue 22:40]
+**** 安装bochs遇到问题
+.fatal error: gtk/gtk.h: No such file or directory
+
+solved：
+- 将`pkg-config gtk+-2.0 --cflags --lib`添加的到bochs下的Makefile的LIBS变量以及bochs下的gui的下Makefile中的LIBS中
+- ./config .....
+- make 
+- sudo make install
+
+
+**** bochs的配置
+- couldn't open ROM image file '/usr/share/bochs/BIOS-bochs-latest
+
+solution: 
+modyfy the bochsrc file
+romimage: file=/usr/local/share/bochs/BIOS-bochs-latest
+
+- can not stat keymap file 'usr/share/bochskeymaps/x11-pc-us.map'
+solution:
+ 将bochsrc文件中最后一行keyboard_ mapping: enabled=1, map=/usr/share/bochs/keymaps/x11-pc-us.map改为
+
+              　　keyboard_ mapping: enabled=1, map=/usr/local/share/bochs/keymaps/x11-pc-us.map #/usr/share/bochs/keymaps　　 
+
+  　　　　　  /x11-pc-us.map
+*** DONE read the chapter of the book <Orange's>
+CLOSED: [2014-07-29 Tue 22:47]
+- State "DONE"       from "TODO"       [2014-07-29 Tue 22:47]
+主要是看了一些调试常用的命令，这是比较重要的，以后要多用一用。

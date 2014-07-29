@@ -3,7 +3,7 @@
         mov ds, ax
         mov es, ax
         call DispStr
-        jmp
+        jmp  $
 
 DispStr:
         mov ax, BootMessage
