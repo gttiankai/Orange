@@ -19,7 +19,6 @@ solved：
 - make 
 - sudo make install
 
-
 **** bochs的配置
 - couldn't open ROM image file '/usr/share/bochs/BIOS-bochs-latest
 
@@ -35,6 +34,26 @@ solution:
 
   　　　　　  /x11-pc-us.map
 *** DONE read the chapter of the book <Orange's>
-CLOSED: [2014-07-29 Tue 22:47]
+CLOSED: <2014-07-29 Tue 22:47>
 - State "DONE"       from "TODO"       [2014-07-29 Tue 22:47]
 主要是看了一些调试常用的命令，这是比较重要的，以后要多用一用。
+** <2014-07-30 Wed> 
+*** TODO read the book of chapter 3
+**** pmtest1.asm 的编写遇到问题。
+不能在屏幕上显示红色的“p”
+** <2014-08-02 Sat 12:31>
+*** 完成dos使用的引导
+**** 在下面的网址下载freedos
+http://bochs.sourceforge.net/diskimages.html
+，然后按照书本上的说明安装一下。
+
+**** 挂载点 /mnt/floppy不存在，
+自己创建就可以了，但是要注意，要开着bochs，并且把b，格式化之后才行。
+*** 阅读pmtest1.asm
+**** 指令EQU 
+EQU不是指令集中的指令而是一条伪指令，在程序中多次出现同一个表达式，为了方便，可以用赋值伪操作给表达式赋予一个名字，就叫equ，我的理解就是equ可以类比为C语言中的宏定义。
+
+**** org
+汇编语言中的一条指令，作用：告诉汇编程序，在执行的时候，将某段机器语言装载到内存中的哪个地址，也是伪指令
+*** 阅读王爽的《汇编语言》<2014-08-02 Sat>--<2014-08-09 Sat>
+完成汇编语言的通读一遍

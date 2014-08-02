@@ -2,7 +2,8 @@
 _*
 *.o
 *.d
-*.asm
 *.sym
 *.img
 *.html
+*.com
+*.bin

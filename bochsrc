@@ -9,11 +9,12 @@ vgaromimage: file=/usr/share/vgabios/vgabios.bin
 
 # what disk image will be used
 
-floppya:1_44=a.image, status=inserted
+floppya:1_44=freedos.img, status=inserted
+floppyb:1_44=pm.img, status=inserted
 
 # chose the boot disk
-
-boot: floppy
+#boot: floppy
+boot:a
 
 # where do we send log messages?
 

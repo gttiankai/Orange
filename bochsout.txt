@@ -31,7 +31,7 @@
 00000000000i[      ]   SB16 support: no
 00000000000i[      ]   USB support: no
 00000000000i[      ]   VGA extension support: vbe
-00000000000i[MEM0  ] allocated memory at 0x7f13350c2010. after alignment, vector=0x7f13350c3000
+00000000000i[MEM0  ] allocated memory at 0x7f9431b23010. after alignment, vector=0x7f9431b24000
 00000000000i[MEM0  ] 32.00MB
 00000000000i[MEM0  ] mem block size = 0x00100000, blocks=32
 00000000000i[MEM0  ] rom at 0xfffe0000/131072 ('/usr/local/share/bochs/BIOS-bochs-latest')
@@ -41,7 +41,7 @@
 00000000000i[DEV   ] PIIX3 PCI-to-ISA bridge present at device 1, function 0
 00000000000i[PLUGIN] init_dev of 'cmos' plugin device by virtual method
 00000000000i[CMOS  ] Using local time for initial clock
-00000000000i[CMOS  ] Setting initial clock to: Tue Jul 29 22:48:30 2014 (time0=1406645310)
+00000000000i[CMOS  ] Setting initial clock to: Sat Aug  2 18:23:27 2014 (time0=1406975007)
 00000000000i[PLUGIN] init_dev of 'dma' plugin device by virtual method
 00000000000i[DMA   ] channel 4 used by cascade
 00000000000i[PLUGIN] init_dev of 'pic' plugin device by virtual method
@@ -58,7 +58,8 @@
 00000000000i[MEM0  ] rom at 0xc0000/40448 ('/usr/share/vgabios/vgabios.bin')
 00000000000i[PLUGIN] init_dev of 'floppy' plugin device by virtual method
 00000000000i[DMA   ] channel 2 used by Floppy Drive
-00000000000i[FLOPPY] fd0: 'a.image' ro=0, h=2,t=80,spt=18
+00000000000i[FLOPPY] fd0: 'freedos.img' ro=0, h=2,t=80,spt=18
+00000000000i[FLOPPY] fd1: 'pm.img' ro=0, h=2,t=80,spt=18
 00000000000i[PLUGIN] init_dev of 'acpi' plugin device by virtual method
 00000000000i[DEV   ] ACPI Controller present at device 1, function 3
 00000000000i[PLUGIN] init_dev of 'ioapic' plugin device by virtual method
@@ -184,27 +185,30 @@
 00001523648i[BXVGA ] VBE known Display Interface b0c5
 00001524317i[VBIOS ] VBE Bios $Id$
 00001600000i[XGUI  ] charmap update. Font Height is 16
-00014040189i[BIOS  ] Booting from 0000:7c00
-00088180752i[      ] Ctrl-C detected in signal handler.
-00088180753i[XGUI  ] Mouse capture off
-00088180753i[      ] dbg: Quit
-00088180753i[CPU0  ] CPU is in real mode (active)
-00088180753i[CPU0  ] CS.mode = 16 bit
-00088180753i[CPU0  ] SS.mode = 16 bit
-00088180753i[CPU0  ] EFER   = 0x00000000
-00088180753i[CPU0  ] | EAX=00001301  EBX=0000000c  ECX=00090010  EDX=00000000
-00088180753i[CPU0  ] | ESP=0000ffd6  EBP=00007c1e  ESI=000e0000  EDI=0000ffac
-00088180753i[CPU0  ] | IOPL=0 id vip vif ac vm rf nt of df if tf SF zf af pf cf
-00088180753i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
-00088180753i[CPU0  ] |  CS:0000( 0004| 0|  0) 00000000 0000ffff 0 0
-00088180753i[CPU0  ] |  DS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
-00088180753i[CPU0  ] |  SS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
-00088180753i[CPU0  ] |  ES:0000( 0005| 0|  0) 00000000 0000ffff 0 0
-00088180753i[CPU0  ] |  FS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
-00088180753i[CPU0  ] |  GS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
-00088180753i[CPU0  ] | EIP=00007c09 (00007c09)
-00088180753i[CPU0  ] | CR0=0x60000010 CR2=0x00000000
-00088180753i[CPU0  ] | CR3=0x00000000 CR4=0x00000000
-00088180753i[CMOS  ] Last time is 1406645332 (Tue Jul 29 22:48:52 2014)
-00088180753i[XGUI  ] Exit
-00088180753i[SIM   ] quit_sim called with exit code 0
+00014040190i[BIOS  ] Booting from 0000:7c00
+00021629840i[BIOS  ] int13_harddisk: function 00, unmapped device for ELDL=80
+00021634010i[BIOS  ] int13_harddisk: function 08, unmapped device for ELDL=80
+00138544162i[BIOS  ] KBD: int09h_handler(): scancode & asciicode are zero?
+01365309442i[      ] Ctrl-C detected in signal handler.
+01365309443i[XGUI  ] Mouse capture off
+01365309443i[      ] dbg: Quit
+01365309443i[CPU0  ] CPU is in protected mode (active)
+01365309443i[CPU0  ] CS.mode = 32 bit
+01365309443i[CPU0  ] SS.mode = 16 bit
+01365309443i[CPU0  ] EFER   = 0x00000000
+01365309443i[CPU0  ] | EAX=60000c70  EBX=00000000  ECX=00090000  EDX=00000000
+01365309443i[CPU0  ] | ESP=00000100  EBP=00000000  ESI=000e0000  EDI=0000077e
+01365309443i[CPU0  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf zf af PF cf
+01365309443i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
+01365309443i[CPU0  ] |  CS:0008( 0001| 0|  0) 000323c0 00000014 0 1
+01365309443i[CPU0  ] |  DS:3224( 0005| 0|  0) 00032240 0000ffff 0 0
+01365309443i[CPU0  ] |  SS:3224( 0005| 0|  0) 00032240 0000ffff 0 0
+01365309443i[CPU0  ] |  ES:3224( 0005| 0|  0) 00032240 0000ffff 0 0
+01365309443i[CPU0  ] |  FS:0000( 0005| 0|  0) 00000000 0000ffff 0 0
+01365309443i[CPU0  ] |  GS:0010( 0002| 0|  0) 000b8000 0000ffff 0 0
+01365309443i[CPU0  ] | EIP=00000013 (00000013)
+01365309443i[CPU0  ] | CR0=0x60000011 CR2=0x00000000
+01365309443i[CPU0  ] | CR3=0x00000000 CR4=0x00000000
+01365309443i[CMOS  ] Last time is 1406975348 (Sat Aug  2 18:29:08 2014)
+01365309443i[XGUI  ] Exit
+01365309443i[SIM   ] quit_sim called with exit code 0
