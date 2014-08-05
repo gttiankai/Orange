@@ -10,7 +10,6 @@ LABEL_GDT:        Descriptor      0,       0,                   0   ; 空描述�
 LABEL_DESC_CODE32:Descriptor      0,       SegCode32Len-1,      DA_C + DA_32 ; 非一致性代码
 LABEL_DESC_VIDEO: Descriptor      0B8000h, 0ffffh,              DA_DRW  ;显存首地址
         ;; GDT 结束
-        
 GdtLen      equ     $ - LABEL_GDT ; GDT length
 GdtPtr      dw      GdtLen - 1    ; GDT boundaries
             dd      0             ; GDT base address
